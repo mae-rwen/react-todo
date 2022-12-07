@@ -2,21 +2,22 @@ import React from 'react';
 import TodoList from './components/TodoList';
 import Form from './components/Form';
 import './style.css';
+import {useState} from "react";
 
-function App() {
 
-  let todos = [];
+export default function App() {
+
+  const [todosArray, setTodosArray] = useState([]);
 
 
   return (
     <div className="App">
       <header>
-            <h2>Todo List made by Alex, Simran, Jannis & Agata</h2>
+        <h2>Todo List made by Alex, Simran, Jannis & Agata</h2>
       </header>
-      <Form />
-      <TodoList />
+      <Form todosArray={todosArray} setTodosArray={setTodosArray}/>
+      <TodoList todos={todosArray}/>
     </div>
   );
 }
 
-export default App;
