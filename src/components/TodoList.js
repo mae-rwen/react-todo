@@ -1,19 +1,15 @@
 import React from 'react'
+import TodoListItem from './ToDoListItem'
 import '../style.css'
 
-export default function TodoList() {
+export default function TodoList({todos}) {
   return (
-    <div className="todoListContainer">
-        
+    <div className="todos">
         <ul className='todoList'>
-            <li>
-                <input className="completed" type="checkbox" />
-                <span className='taskName'>Task1</span>
-                <button className="delButton">Delete</button>
-            </li>
+            {todos.map((element) => {
+              return <TodoListItem taskName={element} key={element.id}/>;
+            })}
         </ul>
-        
-
     </div>
   )
 }
