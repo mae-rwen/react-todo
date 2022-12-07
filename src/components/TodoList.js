@@ -11,26 +11,6 @@ export default function TodoList() {
                 <span className='taskName'>Task1</span>
                 <button className="delButton">Delete</button>
             </li>
-            {/* <li>
-                <input className="completed" type="checkbox" />
-                Task 2
-                <button className="delButton">Delete</button>
-            </li>
-            <li>
-                <input className="completed" type="checkbox" />
-                Task 3
-                <button className="delButton">Delete</button>
-            </li>
-            <li>
-                <input className="completed" type="checkbox" />
-                Task 4
-                <button className="delButton">Delete</button>
-            </li>
-            <li>
-                <input className="completed" type="checkbox" />
-                Task 5
-                <button className="delButton">Delete</button>
-            </li> */}
         </ul>
         
 

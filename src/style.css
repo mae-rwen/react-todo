@@ -1,11 +1,26 @@
+/* app.js styling */
 .App {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    background-image: linear-gradient(120deg, #f5a4c5, #660f53);
+    max-width: 65%;
+    border-radius: 1rem;
+    margin: auto;
 }
 
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+    color: #442342;
+    font-family:'Lucida Sans Regular';
+}
+
+/* TodoList.js styling */
 .todoList {
     background-color: white;
     padding: 5px 10px;
@@ -13,8 +28,8 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    border-radius: 1rem;
+    margin-bottom: 5rem;
     gap: 1rem;
     list-style: none;
 }
@@ -22,26 +37,74 @@
 .todoList li {
     display: flex;
     flex-direction: row;
+    border-radius: 0.5rem;
     gap: 0.5rem;
-    background-color: rgba(156, 106, 204, 0.534);
     min-height: 3rem;
-    min-width: 15rem;
+    min-width: 20rem;
     justify-content: space-between;
     align-items: center;
+    background-color: rgba(192, 153, 228, 0.329);
+}
+
+.completed {
+    margin-left: 0.5rem;
 }
 
 .delButton {
-    background-color: brown;
-    color: aqua;
-    border: 1rem dotted cornflowerblue;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    background-color: #660f53;
+    color: #f5a4c5;
+    min-width: 3rem;
+    height: 2.25rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    border-radius: 0.5rem;
 }
 
 .delButton:hover {
-    background-color: rgb(42, 50, 165);
-    color: rgb(208, 255, 0);
-    border: 1rem dotted rgb(237, 100, 123);
+    background-color: #f5a4c5;
+    color: #660f53;
 }
 
 .taskName {
     flex-grow: 1;
+}
+
+/* Form.js styling */
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+form input, 
+form button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    background-color: rgb(255, 254, 255);
+    color:#442342;
+    border-radius: 0.5rem;
+}
+
+form input {
+    width: 15rem;
+    height: 1.5rem;
+}
+
+form button {
+    background-color: #660f53;
+    color: #f5a4c5;
+    min-width: 3rem;
+    cursor: pointer;
+    height: 2.5rem;
+}
+
+form button:hover {
+    background-color: #f5a4c5;
+    color: #660f53;
 }

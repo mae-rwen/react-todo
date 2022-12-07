@@ -4,10 +4,14 @@ import Form from './components/Form';
 import './style.css';
 
 function App() {
+
+  let todos = [];
+
+
   return (
     <div className="App">
       <header>
-            Todo List made by Alex, Simran, Jannis & Agata
+            <h2>Todo List made by Alex, Simran, Jannis & Agata</h2>
       </header>
       <Form />
       <TodoList />
