@@ -8,11 +8,13 @@ const [inputValue, setInputValue] = useState("");
   return (
     <div>
         <form>
-            <input type="text" onChange={(e) => {setInputValue(e.target.value)}}/>
+            <input type="text" value={inputValue} onChange={(e) => {setInputValue(e.target.value)}}/>
             <button onClick={(e) => {
+              e.preventDefault();
               const arrayCopy = todosArray.slice();
-              arrayCopy.push({taskName: inputValue});
-              setTodosArray(arrayCopy)
+              arrayCopy.push({input: inputValue});
+              setTodosArray(arrayCopy);
+              setInputValue("");
             }}>Add task</button>
         </form>
     </div>
