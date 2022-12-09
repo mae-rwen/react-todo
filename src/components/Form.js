@@ -16,7 +16,7 @@ const [inputValue, setInputValue] = useState("");
               }
               else{
               const arrayCopy = todosArray.slice();
-              arrayCopy.push({input: inputValue});
+              arrayCopy.push({input: inputValue, id: (new Date).getTime()});
               setTodosArray(arrayCopy);
               setInputValue("");}
             }}>Add task</button>
