@@ -71,6 +71,13 @@ header {
 .taskName {
     flex-grow: 1;
 }
+.checkedLook{
+    text-decoration: line-through;
+    opacity: 0.6;
+    flex-grow: 1;
+}
+
+
 
 /* Form.js styling */
 form {
