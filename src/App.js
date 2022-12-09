@@ -9,14 +9,20 @@ export default function App() {
 
   const [todosArray, setTodosArray] = useState([]);
 
+  const deleteTodo = (id) => {
+    const filteredArray = todosArray.filter((todo) => {
+      return todo.id !== id
+    })
+    setTodosArray(filteredArray)
+  }
 
   return (
     <div className="App">
       <header>
         <h2>Todo List made by Alex, Simran, Jannis & Agata</h2>
       </header>
-      <Form todosArray={todosArray} setTodosArray={setTodosArray}/>
-      <TodoList todos={todosArray}/>
+      <Form todosArray={todosArray} setTodosArray={setTodosArray} />
+      <TodoList todos={todosArray} deleteTodo={deleteTodo}/>
     </div>
   );
 }
